@@ -1,0 +1,48 @@
+/* ContactForm.module.css */  
+
+.container {  
+    padding: 20px;  
+    margin: 20px auto;  
+    width: 300px;   
+    border: 2px solid #4caf50;  
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    /* background-color: #f9f9f9;  */
+    
+}  
+
+.form{  
+    display: flex;
+    align-content: center;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+}  
+
+.label {  
+    margin-bottom: 15px; 
+}  
+
+.input {  
+    padding: 10px;  
+    border: 1px solid #ccc; /* Тонка сірка рамка для полів вводу */  
+    border-radius: 5px; /* Заокруглення кутів полів вводу */  
+    transition: border-color 0.3s; /* Плавна анімація кольору рамки */  
+}  
+
+input:focus {  
+    border-color: #4caf50; /* Колір рамки при фокусі на полі вводу */  
+}  
+
+.button {  
+    padding: 10px;  
+    background-color: #4caf50; /* Колір кнопки */  
+    color: white; /* Колір тексту кнопки */  
+    border: none; /* Без рамки */  
+    border-radius: 5px; /* Заокруглення кнопки */  
+    cursor: pointer; 
+}  
+
+button:hover {  
+    background-color: #45a049; /* Плавна зміна кольору кнопки при наведенні */  
+}
