@@ -1,4 +1,4 @@
-const Contact = ({ name, number }) => {  
+const ContactList = ({ name, number }) => {  
     return (  
         <div className="contact">  
             <p>Name: {name}</p>  
@@ -7,4 +7,4 @@ const Contact = ({ name, number }) => {
     );  
 };  
 
-export default Contact;  
+export default ContactList;  
