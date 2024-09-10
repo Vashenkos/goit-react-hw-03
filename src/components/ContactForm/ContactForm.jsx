@@ -1,14 +1,13 @@
-import s from "./Description.module.css";
+import s from "./ContactForm.module.css";
 
-const Description= () => {  
+const ContactForm= () => {  
   return (  
-      <div className="cafe-container ">  
-          <h1 className="h">Sip Happens Café</h1>  
-          <p className="p">  
-          Please leave your feedback about our service by selecting one of the options below.  
-          </p>  
+      <div className="container">  
+          <label htmlFor="">
+            <input type="text" />
+          </label>
       </div>  
   );  
 };  
 
-export default Description;
+export default ContactForm;
