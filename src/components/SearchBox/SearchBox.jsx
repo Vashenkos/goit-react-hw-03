@@ -1,4 +1,4 @@
-const Feedback = ({ feedbackCounts, totalFeedback,positiveFeedback }) => {    
+const SearchBox = ({ feedbackCounts, totalFeedback,positiveFeedback }) => {    
     return (  
         <div className="feedback">  
             <h2>Feedback Statistics</h2>  
@@ -11,7 +11,7 @@ const Feedback = ({ feedbackCounts, totalFeedback,positiveFeedback }) => {
     );  
 };  
 
-export default Feedback;
+export default SearchBox;
 
 
 
