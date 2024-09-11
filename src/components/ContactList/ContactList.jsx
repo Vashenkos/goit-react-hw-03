@@ -1,3 +1,4 @@
+import s from "./ContactList.module.css";  
 const ContactList = ({ name, number }) => {  
     return (  
         <div className="contact">  
