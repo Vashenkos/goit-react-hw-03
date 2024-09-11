@@ -1,9 +1,8 @@
 .contact{
-    border: 2px solid #007bff; /* Колір та товщина рамки */  
-    border-radius: 8px; /* Закруглення кутів */  
-    padding: 15px; /* Відступи всередині рамки */  
-    margin: 10px 0; /* Відступи між контактами */  
-    background-color: #f9f9f9; /* Фоновий колір */  
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тінь для об'єму */  
-     
+    border: 2px solid #007bff; 
+    border-radius: 8px;  
+    padding: 15px; 
+    margin: 10px 0; 
+    background-color: #f9f9f9; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }  
