@@ -1,51 +1,53 @@
-import ContactForm from "./components/ContactForm/ContactForm";
-import SearchBox from "./components/SearchBox/SearchBox";
-import ContactList from "./components/ContactList/ContactList";
-import { useState, useEffect } from "react";
-import "/go it/goit-react-hw-03/src/App";
+import ContactForm from "./components/ContactForm/ContactForm";  
+import SearchBox from "./components/SearchBox/SearchBox";  
+import ContactList from "./components/ContactList/ContactList";  
+import { useState, useEffect } from "react";  
 
-const initialContacts = [
-  { id: "id-1", name: "Rosie Simpson", number: "459-12-56" },
-  { id: "id-2", name: "Hermione Kline", number: "443-89-12" },
-  { id: "id-3", name: "Eden Clements", number: "645-17-79" },
-  { id: "id-4", name: "Annie Copeland", number: "227-91-26" },
-];
+// Прибираємо неправильний імпорт  
+// import App from './src/App'; // цей імпорт не потрібен  
 
-function App() {
-  const [contacts, setContacts] = useState(() => {
-    return JSON.parse(localStorage.getItem("contacts")) || initialContacts;
-  });
+const initialContacts = [  
+  { id: "id-1", name: "Rosie Simpson", number: "459-12-56" },  
+  { id: "id-2", name: "Hermione Kline", number: "443-89-12" },  
+  { id: "id-3", name: "Eden Clements", number: "645-17-79" },  
+  { id: "id-4", name: "Annie Copeland", number: "227-91-26" },  
+];  
 
-  const [filter, setFilter] = useState("");
+function App() {  
+  const [contacts, setContacts] = useState(() => {  
+    return JSON.parse(localStorage.getItem("contacts")) || initialContacts;  
+  });  
 
-  useEffect(() => {
-    localStorage.setItem("contacts", JSON.stringify(contacts));
-  }, [contacts]);
+  const [filter, setFilter] = useState("");  
 
-  const filterContacts = contacts.filter((contact) =>
-    contact.name.toLowerCase().includes(filter.toLowerCase())
-  );
+  useEffect(() => {  
+    localStorage.setItem("contacts", JSON.stringify(contacts));  
+  }, [contacts]);  
 
-  const addContact = (newContact) => {
-    setContacts((prevContacts) => {
-      return [...prevContacts, newContact];
-    });
-  };
+  const filterContacts = contacts.filter((contact) =>  
+    contact.name.toLowerCase().includes(filter.toLowerCase())  
+  );  
 
-  const deleteContact = (contactId) => {
-    setContacts((prevContacts) => {
-      return prevContacts.filter((contact) => contact.id !== contactId);
-    });
-  };
+  const addContact = (newContact) => {  
+    setContacts((prevContacts) => {  
+      return [...prevContacts, newContact];  
+    });  
+  };  
 
-  return (
-    <div className="container">
-      <h1 className="title">Phonebook</h1>
-      <ContactForm onAddContact={addContact} />
-      <SearchBox filter={filter} onFilterChange={setFilter} />
-      <ContactList contacts={filterContacts} onDeleteContact={deleteContact} />
-    </div>
-  );
-}
+  const deleteContact = (contactId) => {  
+    setContacts((prevContacts) => {  
+      return prevContacts.filter((contact) => contact.id !== contactId);  
+    });  
+  };  
+
+  return (  
+    <div className="container">  
+      <h1 className="title">Phonebook</h1>  
+      <ContactForm onAddContact={addContact} />  
+      <SearchBox filter={filter} onFilterChange={setFilter} />  
+      <ContactList contacts={filterContacts} onDeleteContact={deleteContact} />  
+    </div>  
+  );  
+}  
 
 export default App;
