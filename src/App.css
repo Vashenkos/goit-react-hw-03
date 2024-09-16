@@ -1,3 +1,15 @@
+.ulcontact{
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+  padding: 20px;  
+  background-color: #5d76c4;  
+  border-radius: 8px;  
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+  
+}  
+
+
 
 .container {  
   display: flex;  
@@ -6,8 +18,12 @@
   padding: 20px;  
   background-color: #5d76c4;  
   border-radius: 8px;  
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  
-}  
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+
+}
+
+
+
 .wera{
   display: block;
   margin-bottom: 5px;
@@ -89,7 +105,12 @@ button:hover {
 }
 
 .imgpng  {
-  height: 20px;
-  width: 20px;
-  display: flex;
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  vertical-align: middle; 
+  display: inline-block;
+}
+.error{
+  background-color: #b31a0c;
 }
